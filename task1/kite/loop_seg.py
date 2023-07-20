@@ -36,7 +36,6 @@ class KiteSeg(KiteBack):
 	cnt_val = 0
 	def fit(self, epochs=169):#现行验证，意义不大，把所有权重都验证要花不少时间
 		print('\n', '*'*8, 'Fitting:'+self.root)
-		self.callback.save_key(self.model, 'val_iou')
 		time_fit_begin = time.time()
 		for i in range(self.epoch, epochs):
 			time_stamp = time.time()
@@ -51,20 +50,17 @@ class KiteSeg(KiteBack):
 					self.model.regular_udh(self.udh_out, self.udh_lab)
 
 				logs = self.val(epoch=i)	
-				if i%30==0:
-					self.callback.save_key(self.model, 'e{}'.format(i))
-				self.callback.update(logs=logs, model=self.model)
-
+				if logs['val_f1s']>best_dice:
+					best_dice = log['val_f1s']
+					torch.save(self.model.static_dict(), self.root+'/val_top.pt')
 		
 			self.grad_dump(i)
 			# 早停&训练验证过程加入学习率和损失的tensorboard曲线
-			# if self.callback.stop_training and i>0.6*epochs:
-			# 	print('Stop Training!!!')
-			# 	break
 			time_epoch = time.time() - time_stamp
 			print('{:03}* {:.2f} mins, left {:.2f} hours to run'.format(i, time_epoch/60, time_epoch/60/60*(epochs-i)))
 				
 		logTime = '\nRunning {:.2f} hours for {} epochs!'.format((time.time() - time_fit_begin)/60/60, epochs)
+		print(logTime)
 		self.weights_desc()
 	
 	def val(self, epoch=0, flagDebug=False):#GPU 加速评价，所以评价函数也要用PyTorch实现

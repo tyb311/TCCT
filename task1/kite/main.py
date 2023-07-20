@@ -65,7 +65,7 @@ if __name__ == '__main__':
 	##################################################################
 	keras = KiteSeg(model=net, dataset=dataset, root=args.root, args=args) 
 	if args.resume:
-		path = args.root+'/val_iou.pt'
+		path = args.root+'/val_top.pt'
 		pt = torch.load(path, map_location=keras.device)
 		keras.model.load_state_dict(pt, strict=False)
 		print('loaded model:', path)

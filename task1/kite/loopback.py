@@ -47,7 +47,6 @@ class KiteBack(object):
 		print('\tParams model:',sum(p.numel() for p in self.model.parameters() if p.requires_grad))
 
 		#	回调函数
-		self.callback = CheckPoint(root=self.root)
 
 	def cuda(self, m):
 		return m.to(self.device)
@@ -96,7 +95,6 @@ class KiteBack(object):
 	
 	def remove_pths(self, flag_ignore='los'):
 		for path in glob.glob(self.root+'/*.pt'):
-		# for key in self.callback.keys:
 			# path = self.root+'/'+key+'.pt'
 			if flag_ignore not in path:
 				os.remove(path)

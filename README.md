@@ -13,9 +13,9 @@ Boundary Regression and Feature Polarization".
 
 ### [Paper](https://ieeexplore.ieee.org/abstract/document/9703249) -->
 
-![TCCT-ViT&CNN combined Net](docs\net.png)
-![TCCT-Feature Polarization](docs\fpl.png)
-![TCCT-Segmentation Results](docs\seg.png)
+![TCCT-ViT&CNN combined Net](docs/net.png)
+![TCCT-Feature Polarization](docs/fpl.png)
+![TCCT-Segmentation Results](docs/seg.png)
 
 ## Prerequisites
 * Python 3.8 
@@ -50,14 +50,14 @@ Project for task1:Segmentation
         └── ...   
 ```
 
-    And for the training on GOALS dataset, run the command
-    ```bash
-    CUDA_VISIBLE_DEVICES=0 python kite/main.py --bs=8 --net=stc_tt --los=di --epochs=100 --db=goals
-    ```
-    And for the training on HCMS dataset, run the command
-    ```bash
-    CUDA_VISIBLE_DEVICES=1 python kite/main.py --bs=8 --net=stc_tt --los=di --epochs=100 --db=hcms
-    ```
+And for the training on GOALS dataset, run the command
+```bash
+CUDA_VISIBLE_DEVICES=0 python kite/main.py --bs=8 --net=stc_tt --los=di --epochs=100 --db=goals
+```
+And for the training on HCMS dataset, run the command
+```bash
+CUDA_VISIBLE_DEVICES=1 python kite/main.py --bs=8 --net=stc_tt --los=di --epochs=100 --db=hcms
+```
 
 <!-- ```
 @article{tan2023tcct,
