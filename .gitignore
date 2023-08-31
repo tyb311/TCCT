@@ -1,8 +1,7 @@
-*fcp*
-*fcs*
-*reg*
-*gen*
-*weights*
-*.csv
-*.pd
-*.pt
+# *fcp*
+# *fcs*
+# *reg*
+# *gen*
+*code.py
+# *weights*
+# *.pt
