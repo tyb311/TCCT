@@ -5,7 +5,7 @@ from .utils import *
 from .octnpy import *
 
 # SIZE_IMAGE=384
-SIZE_IMAGEH, SIZE_IMAGEW = 224,224#224,224#256, 448#128,128#
+SIZE_IMAGEH, SIZE_IMAGEW = 256,256#224,224#256, 448#128,128#
 def make_tran(SIZE_IMAGEH,SIZE_IMAGEW):
 	ALB_TWIST = alb.Compose([
 		alb.PadIfNeeded(SIZE_IMAGEH, SIZE_IMAGEW,p=1, border_mode=cv2.BORDER_CONSTANT, mask_value=0),
@@ -21,7 +21,7 @@ ALB_TWIST = make_tran(SIZE_IMAGEH,SIZE_IMAGEW)
 ALB_VALID = alb.Compose([
 	alb.HorizontalFlip(p=1), 
 	alb.VerticalFlip(p=0.5),
-	alb.RGBShift(p=1),alb.HueSaturationValue(p=1),alb.RandomContrast(p=1),alb.RandomBrightness(p=1),
+	# alb.RGBShift(p=1),alb.HueSaturationValue(p=1),alb.RandomContrast(p=1),alb.RandomBrightness(p=1),
 ])
 
 from torch.utils.data import DataLoader, Dataset

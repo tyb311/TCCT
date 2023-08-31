@@ -14,8 +14,11 @@ Boundary Regression and Feature Polarization" (submitted to TMI2023).
 ### [Paper](https://ieeexplore.ieee.org/abstract/document/9703249) -->
 
 ![TCCT-ViT&CNN combined Net](docs/net.png)
+
 ![TCCT-Feature Polarization](docs/fpl.png)
+
 ![TCCT-Segmentation Results](docs/seg.png)
+
 
 ## Prerequisites
 * Python 3.8 

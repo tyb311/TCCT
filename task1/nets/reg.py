@@ -81,17 +81,7 @@ class RegNet(nn.Module):
 		return y
 
 	def plot_udh(self, path_save='exps/feat_udh.png'):
-		embs = [e.detach().cpu().data.numpy() for e in self.emb_list]
-		tgts = [e.detach().cpu().data.numpy() for e in self.tgt_list]
-		plt.figure()
-		with plt.style.context(['science', 'retro', 'grid', 'no-latex']):
-			self.fcs.plot_embedding(embs=embs, tgts=tgts, flag_emb=True)
-			plt.savefig(path_save.replace('.', '_emb.'), dpi=360)
-			plt.cla()
-			plt.clf()
-			self.fcs.plot_embedding(embs=embs, tgts=tgts, flag_emb=False)
-			plt.savefig(path_save.replace('.', '_tgt.'), dpi=360)
-		plt.close()
+		pass
 
 	def regular_udh(self, pred, true, tau=5):
 		# feat = self.base.feat#.clone()

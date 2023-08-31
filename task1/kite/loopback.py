@@ -33,7 +33,6 @@ class KiteBack(object):
 		print('*'*32, 'Keras Backend Information!')
 		self.model = model
 
-		#	设置路径:	清晨morning, 下午afternoon, 傍晚evening, 深夜night(用ABCD代表一天中的次序)
 		self.root = 'exp_tcct-bp'
 		if not os.path.exists(self.root):
 			os.makedirs(self.root)
