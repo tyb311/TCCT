@@ -5,9 +5,9 @@
 -   GOALS Challenge:https://aistudio.baidu.com/aistudio/competition/detail/230/0/introduction
 -   Implementation by PaddlePaddle/PyTorch
 -   Pytorch implementation of the paper "Retinal Layer Segmentation in OCT images with
-Boundary Regression and Feature Polarization".
+Boundary Regression and Feature Polarization" (submitted to TMI2023).
 
--   The project's code is constantly being updated, but sorting out the original code may take a few days, please be patient!
+<!-- -   The project's code is constantly being updated, but sorting out the original code may take a few days, please be patient! -->
 <!-- 
 ![tease](https://github.com/FuyaLuo/PearlGAN/blob/main/docs/Model.PNG)
 
@@ -63,7 +63,7 @@ CUDA_VISIBLE_DEVICES=1 python kite/main.py --bs=8 --net=stc_tt --los=di --epochs
 @article{tan2023tcct,
   title={Retinal Layer Segmentation in OCT images with
 Boundary Regression and Feature Polarization},
-  author={Luo, Fuya and Li, Yunhan and Zeng, Guang and Peng, Peng and Wang, Gang and Li, Yongjie},
+  author={Yubo Tan, ... and Li, Yongjie},
   journal={submitted to IEEE Transactions on Medical Imaging},
   year={2023},
   publisher={IEEE}
