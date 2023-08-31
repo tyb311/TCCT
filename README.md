@@ -7,7 +7,8 @@
 -   Pytorch implementation of the paper "Retinal Layer Segmentation in OCT images with
 Boundary Regression and Feature Polarization" (submitted to TMI2023).
 
-<!-- -   The project's code is constantly being updated, but sorting out the original code may take a few days, please be patient! -->
+The project's code is constantly being updated!
+<!-- But sorting out the original code may take a few days, please be patient! -->
 <!-- 
 ![tease](https://github.com/FuyaLuo/PearlGAN/blob/main/docs/Model.PNG)
 
