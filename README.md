@@ -4,20 +4,18 @@
 -   MICCAI2022 Challenge: Glaucoma Oct Analysis and Layer Segmentation (GOALS)
 -   GOALS Challenge:https://aistudio.baidu.com/aistudio/competition/detail/230/0/introduction
 -   Implementation by PaddlePaddle/PyTorch
--   Pytorch implementation of the paper "Retinal Layer Segmentation in OCT images with
-Boundary Regression and Feature Polarization" (submitted to TMI2023).
+-   Pytorch implementation of the paper "[Retinal Layer Segmentation in OCT images with
+Boundary Regression and Feature Polarization](https://ieeexplore.ieee.org/document/10255666)" (accepted by TMI2023).
 
 The project's code is constantly being updated!
-<!-- But sorting out the original code may take a few days, please be patient! -->
-<!-- 
-![tease](https://github.com/FuyaLuo/PearlGAN/blob/main/docs/Model.PNG)
 
-### [Paper](https://ieeexplore.ieee.org/abstract/document/9703249) -->
-
+*   Network Structure
 ![TCCT-ViT&CNN combined Net](docs/net.png)
 
+*   Feature Polarization
 ![TCCT-Feature Polarization](docs/fpl.png)
 
+*   Visualization for Segmentation
 ![TCCT-Segmentation Results](docs/seg.png)
 
 
@@ -63,16 +61,24 @@ And for the training on HCMS dataset, run the command
 CUDA_VISIBLE_DEVICES=1 python kite/main.py --bs=8 --net=stc_tt --los=di --epochs=100 --db=hcms
 ```
 
-<!-- ```
+
+##  Citation
+If you would like to use the code, please cite our work.
+```
+Y. Tan et al., "Retinal Layer Segmentation in OCT images with Boundary Regression and Feature Polarization," in IEEE Transactions on Medical Imaging, doi: 10.1109/TMI.2023.3317072.
+```
+
+```
 @article{tan2023tcct,
-  title={Retinal Layer Segmentation in OCT images with
-Boundary Regression and Feature Polarization},
-  author={Yubo Tan, ... and Li, Yongjie},
-  journal={submitted to IEEE Transactions on Medical Imaging},
+  author={Tan, Yubo and Shen, Wen-Da and Wu, Ming-Yuan and Liu, Gui-Na and Zhao, Shi-Xuan and Chen, Yang and Yang, Kai-Fu and Li, Yong-Jie},
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={Retinal Layer Segmentation in OCT images with Boundary Regression and Feature Polarization}, 
   year={2023},
+  ISSN={1558-254X},
+  doi={10.1109/TMI.2023.3317072},
   publisher={IEEE}
 }
-``` -->
+```
 
 ##  Task2:Glaucoma Classification
     Model:ResNet/Paddle
