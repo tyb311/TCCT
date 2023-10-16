@@ -47,7 +47,7 @@ Project for task1:Segmentation
         ├── reg.py (loss functions [feature polarization & boundary regression])  
         ├── tcct.py (Tightly combined Cross-Convolution and Transformer)  
         └── ...   
-    ├── onnx (trained weights)  
+    ├── pnnx (trained weights)  
         ├── onnx.py (code to inference OCT images with *.onnx files)  
         └── ...   
 ```

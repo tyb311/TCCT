@@ -1,4 +1,4 @@
 
 git add .
-git commit -m "accepted"
+git commit -m "add weights"
 git push -f TCCT main
